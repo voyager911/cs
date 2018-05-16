@@ -1,0 +1,244 @@
+# pengweixing.github.io
+pwxpersonalpage
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>侧边固定图标的CSS3特效的层</title>
+<style>
+
+    body{
+        margin:0;
+        padding:0;
+        height:900px;
+        background-image: url("images/f2.jpg");
+        background-repeat: repeat-x;
+    }
+    .contentLog>ul{
+        position:fixed;
+        top:13%;
+        right:3%;
+        list-style-type: none;//消除了表格的前缀
+        display:block;
+        padding:20px;
+        margin:2px;
+    }
+
+    #btnb1{
+        border:1px solid #000000;
+        width:54px;
+        height:80px;
+        margin:0 auto;
+        line-height:28px;
+        color:white;
+        background-color:#4CAF50;
+        text-align: center;
+    }
+    #btnb1:hover{
+        transform-origin: 0 0;
+        transform:rotate(90deg);
+        -webkit-transition:all 2s;
+        -moz-transition:all 2s;
+        -o-transition:all 2s;//图片90度切换
+    }
+    .ww{
+        height:120px;
+        width:auto;
+        list-style-type:none;
+        margin:0;
+        padding:0;
+        overflow:hidden;
+        background:#98bf21;
+    }
+    #nva{
+        position:relative;
+        top:10px;
+        left:20px;
+    }
+    li{
+        float:left;//向左浮动
+    }
+
+    li a{
+        display:block;
+        color:white;
+        text-align:center;
+        padding:22px 48px;
+        margin-top: 20px;
+        margin-left: 20px;
+        text-decoration:none;//下划线去掉
+    }
+
+    li a#about{
+        position:absolute;
+        right:35px;
+    }
+    /* 下拉按钮样式 */
+    .dropbtn {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        margin-right:22px;
+        margin-top:0;
+        margin-left:22px;
+
+    }
+
+    /* 容器 <div> - 需要定位下拉内容 */
+    .dropdown {
+        position: relative;
+        display: inline-block;
+        top:19px;
+        left:30px;
+    }
+
+    /* 下拉内容 (默认隐藏) */
+    .dropdown-content {
+        display: none;
+        position: static;
+        background-color: #E97235;
+        min-width: 160px;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    /* 下拉菜单的链接 */
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    /* 鼠标移上去后修改下拉菜单链接颜色 */
+    .dropdown-content a:hover {background-color: #f1f1f1}
+
+    /* 在鼠标移上去后显示下拉菜单 */
+    .dropdown:hover .dropdown-content {
+        display: block;
+        z-index: 1;
+    }
+
+    /* 当下拉内容显示后修改下拉按钮的背景颜色 */
+    .dropdown:hover .dropbtn {
+        background-color: #3e8e41;
+    }
+    .mcheader{
+        position:absolute;
+        top:280px;
+        left:150px;
+    }
+    div.img {
+        margin: 2px;
+        padding:20px;
+        border: 2px solid #ccc;
+        float: left;
+        width: 120px;
+    }
+
+    div.img:hover {
+        border: 1px solid #777;
+    }
+
+    div.img img {
+        width: 100%;
+        height: auto;
+    }
+    .mc1{
+        display:inline;
+    }
+    div.desc {
+        padding:15px;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+<div class="nva" id="nva">
+    <ul class="ww">
+        <li><div class="dropdown">
+            <button class="dropbtn">店铺主页</button>
+            <div class="dropdown-content">
+                <a href="#">产品介绍</a>
+                <a href="#">产地介绍</a>
+                <a href="#">规格介绍</a>
+            </div></div></li>
+        <li><div class="dropdown">
+            <button class="dropbtn">美发电器类</button>
+            <div class="dropdown-content">
+                <a href="#">电吹风</a>
+                <a href="#">直发器</a>
+                <a href="#">夹板</a>
+            </div></div></li>
+        <li><div class="dropdown">
+            <button class="dropbtn">美发用品类</button>
+            <div class="dropdown-content">
+                <a href="#">梳子</a>
+                <a href="#">剪刀</a>
+                <a href="#">喷水壶</a>
+            </div></div></li>
+        <li><div class="dropdown">
+            <button class="dropbtn">美发周边类</button>
+            <div class="dropdown-content">
+                <a href="#">橡皮筋</a>
+                <a href="#">推子</a>
+                <a href="#">围布</a>
+            </div></div></li>
+        <li><a href="#about" id="about"><p>关于</p></li>
+    </ul>
+</div>
+
+<div class="maincontenet">
+    <div class="mcheader">
+        <h2>产品</h2>
+        <div class="mc1">
+            <div class="img" id="img1">
+                <a target="_blank" href="http://www.baidu.com">
+                    <img src="images/bush1.jpg" alt="图片文本描述" width="300" height="200">
+                </a>
+                <div class="desc">这里添加图片3价格35</div>
+            </div>
+        </div>
+        <div class="mc1">
+            <div class="img" id="img2">
+                <a target="_blank" href="http://www.baidu.com">
+                    <img src="images/bush2.jpg" alt="图片文本描述" width="300" height="200">
+                </a>
+                <div class="desc">这里添加图片3价格35</div>
+            </div>
+        </div>
+        <div class="mc1">
+            <div class="img" id="img3">
+                <a target="_blank" href="http://www.baidu.com">
+                    <img src="images/bush3.jpg" alt="图片文本描述" width="300" height="200">
+                </a>
+                <div class="desc">这里添加图片3价格35</div>
+            </div>
+        </div>
+        <div class="mc1">
+            <div class="img" id="img4">
+                <a target="_blank" href="http://www.baidu.com">
+                    <img src="images/bush4.jpg" alt="图片文本描述" width="300" height="200">
+                </a>
+                <div class="desc">这里添加图片3价格35</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="btn">
+    <div class="contentLog">
+        <ul>
+            <div id="btnb1">有害信息举报</div>
+            <div id="btnb1">添加二维码</div>
+            <div id="btnb1">收藏本站</div>
+            <div id="btnb1">搜索</div>
+            <div id="btnb1">用户反馈</div>
+        </ul>
+    </div>
+</div>
+<div align="center" class="word1">这是一个盒子</div>
+</body>
+</html>
