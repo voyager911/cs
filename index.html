@@ -1,5 +1,3 @@
-# pengweixing.github.io
-pwxpersonalpage
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,31 +21,35 @@ pwxpersonalpage
         padding:20px;
         margin:2px;
     }
-
+    .contentLog>ul>img{
+        position:absolute;
+        right:-65px;
+        top:0;
+    }
     #btnb1{
         border:1px solid #000000;
-        width:54px;
-        height:80px;
-        margin:0 auto;
-        line-height:28px;
+        width:45px;
+        margin:6px 5px;
+        padding:15px 5px;
         color:white;
         background-color:#4CAF50;
-        text-align: center;
+        text-align: center; /*设置文本水平居中*/
+        overflow: hidden;
     }
-    #btnb1:hover{
-        transform-origin: 0 0;
-        transform:rotate(90deg);
-        -webkit-transition:all 2s;
-        -moz-transition:all 2s;
-        -o-transition:all 2s;//图片90度切换
+    #btnb1>img:hover{
+        transform-origin:100% 0%;
+        transform:rotate(-90deg);
+        -webkit-transition:all 1.2s linear;
+        -moz-transition:all 1.2s linear;
+        -o-transition:all 1.2s linear;//图片90度切换
+        z-index:2;
     }
-    .ww{
-        height:120px;
+    .nva>.ww{
+        height:80px;
         width:auto;
         list-style-type:none;
         margin:0;
         padding:0;
-        overflow:hidden;
         background:#98bf21;
     }
     #nva{
@@ -72,6 +74,7 @@ pwxpersonalpage
     li a#about{
         position:absolute;
         right:35px;
+        padding:5px;
     }
     /* 下拉按钮样式 */
     .dropbtn {
@@ -83,7 +86,7 @@ pwxpersonalpage
         cursor: pointer;
         margin-right:22px;
         margin-top:0;
-        margin-left:22px;
+        margin-left:15px;
 
     }
 
@@ -107,7 +110,7 @@ pwxpersonalpage
 
     /* 下拉菜单的链接 */
     .dropdown-content a {
-        color: black;
+        color: green;
         padding: 12px 16px;
         text-decoration: none;
         display: block;
@@ -150,9 +153,12 @@ pwxpersonalpage
     .mc1{
         display:inline;
     }
+    .mc1>.img img:hover{
+        width:100%;transform: scale(1.5);//通过事件放大图片
+    }
     div.desc {
         padding:15px;
-        text-align: center;
+        text-align:center;
     }
 </style>
 </head>
@@ -193,21 +199,21 @@ pwxpersonalpage
 
 <div class="maincontenet">
     <div class="mcheader">
-        <h2>产品</h2>
+        <h2></h2>
         <div class="mc1">
             <div class="img" id="img1">
                 <a target="_blank" href="http://www.baidu.com">
                     <img src="https://github.com/voyager911/hello-world/raw/master/comb.md/pic1.jpg" alt="图片文本描述" width="300" height="200">
                 </a>
-                <div class="desc">实用的卷发梳1</div>
+                <div class="desc">图片描述1</div>
             </div>
         </div>
         <div class="mc1">
             <div class="img" id="img2">
                 <a target="_blank" href="http://www.baidu.com">
-                   <img src="https://github.com/voyager911/hello-world/raw/master/comb.md/pic2.jpg" alt="图片文本描述" width="300" height="200">
+                    <img src="https://github.com/voyager911/hello-world/raw/master/comb.md/pic2.jpg" alt="图片文本描述" width="300" height="200">
                 </a>
-                <div class="desc">2精致的卷发梳2</div>
+                <div class="desc">图片描述2</div>
             </div>
         </div>
         <div class="mc1">
@@ -215,7 +221,7 @@ pwxpersonalpage
                 <a target="_blank" href="http://www.baidu.com">
                     <img src="https://github.com/voyager911/hello-world/raw/master/comb.md/pic3.jpg" alt="图片文本描述" width="300" height="200">
                 </a>
-                <div class="desc">3实惠的卷发梳3</div>
+                <div class="desc">图片描述3</div>
             </div>
         </div>
         <div class="mc1">
@@ -223,7 +229,7 @@ pwxpersonalpage
                 <a target="_blank" href="http://www.baidu.com">
                     <img src="https://github.com/voyager911/hello-world/raw/master/comb.md/pic4.jpg" alt="图片文本描述" width="300" height="200">
                 </a>
-                <div class="desc">4时尚的卷发梳4</div>
+                <div class="desc">图片描述4</div>
             </div>
         </div>
     </div>
@@ -231,14 +237,13 @@ pwxpersonalpage
 <div class="btn">
     <div class="contentLog">
         <ul>
-            <div id="btnb1">有害信息举报</div>
-            <div id="btnb1">添加二维码</div>
-            <div id="btnb1">收藏本站</div>
-            <div id="btnb1">搜索</div>
-            <div id="btnb1">用户反馈</div>
+            <div id="btnb1"><img src="images/picleft1">有害信息举报</div>
+            <div id="btnb1"><img src="images/picleft2">添加二维码</div>
+            <div id="btnb1"><img src="images/picleft3">收藏本站</div>
+            <div id="btnb1"><img src="images/picleft4">搜索</div>
+            <div id="btnb1"><img src="images/picleft5">用户反馈</div>
         </ul>
     </div>
 </div>
-    
 </body>
 </html>
