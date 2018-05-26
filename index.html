@@ -2,399 +2,200 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>简单模板</title>
-<style>
-
-    body{
-        margin:0 auto;
-        padding:36px;
-        height:900px;
-        background-color:#F3F3FA
-    }
-     .btn2{
-        position:relative;
-	top:450px;
-	left:120px;
-	}
-    .contentLog>ul{
-        position:fixed;
-        top:13%;
-        right:3%;
-        list-style-type: none;//消除了表格的前缀
-        display:block;
-        padding:20px;
-        margin:2px;
-    }
-    .contentLog>ul>img{
-        position:absolute;
-        right:-65px;
-        top:0;
-    }
-    #btnb1{
-        border:1px solid #000000;
-        width:45px;
-        margin:6px 5px;
-        padding:15px 5px;
-        color:white;
-        background-color:#4CAF50;
-        text-align: center; /*设置文本水平居中*/
-        overflow: hidden;
-    }
-    #btnb1>img:hover{
-        transform-origin:100% 0%;
-        transform:rotate(-90deg);
-        -webkit-transition:all 1.2s linear;
-        -moz-transition:all 1.2s linear;
-        -o-transition:all 1.2s linear;//图片90度切换
-        z-index:2;
-    }
-	
-    .nva>.ww{
-        height:80px;
-        width:auto;
-        list-style-type:none;
-        margin:0;
-        padding:0;
-        background:#98bf21;
-    }
-    #nva{
-        position:relative;
-        top:10px;
-        left:20px;
-    }
-    li{
-        float:left;//向左浮动
-    }
-
-    li a{
-        display:block;
-        color:white;
-        text-align:center;
-        padding:22px 48px;
-        margin-top: 20px;
-        margin-left: 20px;
-        text-decoration:none;//下划线去掉
-    }
-
-    li a#about{
-        position:absolute;
-        right:35px;
-        padding:5px;
-    }
-    /* 下拉按钮样式 */
-    .dropbtn {
-        background-color: #4CAF50;
-        color: white;
-        padding: 10px;
-        font-size: 16px;
-        border: none;
-        cursor: pointer;
-        margin-right:22px;
-        margin-top:0;
-        margin-left:15px;
-
-    }
-
-    /* 容器 <div> - 需要定位下拉内容 */
-    .dropdown {
-        position: relative;
-        display: inline-block;
-        top:19px;
-        left:30px;
-    }
-
-    /* 下拉内容 (默认隐藏) */
-    .dropdown-content {
-        display: none;
-        position: static;
-        background-color: #E97235;
-        min-width: 160px;
-        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-        z-index: 1;
-    }
-
-    /* 下拉菜单的链接 */
-    .dropdown-content a {
-        color: green;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-    }
-
-    /* 鼠标移上去后修改下拉菜单链接颜色 */
-    .dropdown-content a:hover {background-color: #f1f1f1}
-
-    /* 在鼠标移上去后显示下拉菜单 */
-    .dropdown:hover .dropdown-content {
-        display: block;
-        z-index: 1;
-    }
-
-    /* 当下拉内容显示后修改下拉按钮的背景颜色 */
-    .dropdown:hover .dropbtn {
-        background-color: #3e8e41;
-    }
-    .mcheader{
-        position:absolute;
-        top:280px;
-        left:150px;
-    }
-    div.img {
-        margin: 2px;
-        padding:20px;
-        border: 2px solid #ccc;
-        float: left;
-        width: 120px;
-    }
-
-    div.img:hover {
-        border: 1px solid #777;
-    }
-
-    div.img img {
-        width: 100%;
-        height: auto;
-    }
-    .mc1{
-        display:inline;
-    }
-    .mc1>.img img:hover{
-        width:100%;transform: scale(2);//通过事件放大图片
-    }
-    div.desc {
-        padding:15px;
-        text-align:center;
-    }
-
-	#calculater{
-    margin:auto;
-    margin-top:30px;
-    border:solid 6px #2371D3;
-    border-spacing:0;//使得其默认距离为零
-    position:relative;
-    top:400px;
-    left:200px;
-}
-#display{
-    width:100%;
-    height:30px;
-    border-bottom:solid 4px #2371D3;
-    font-weight:bold;
-    color:#193D83;
-    font-family:sans-serif;
-    padding-left:2px;
-}
-.numberkey{
-    cursor:pointer;
-    width:40px;
-    height:30px;
-    border:solid 1px #FFFFFF;
-    background:#2371D3;
-    color:#ffffff;
-    text-align:center;
-    font-family:Simsun;
-    font-weight:bold;
-}
-#equality{
-    cursor:pointer;
-    width:40px;
-    height:100%;
-    background:#2371D3;
-    border:solid 1px #FFFFFF;
-    color:#ffffff;
-    text-align:center;
-    font-weight:bold;
-    font-family:sans-serif;
-}
-.numberkey:hover{
-    background:#EA6f30;
-}
-#equality{
-    background:#EA6F30;
-}
-</style>
+    <title>个人简历</title>
+    
+    <style>
+        body{
+            width:100%;
+            text-align:center;
+            margin:0;
+            padding:0;
+            font-family:sans-serif;
+            background-image: url("https://github.com/voyager911/o/raw/master/comb1/person/cover.png");
+            background-repeat: repeat;
+            border-left:1px solid #9fcdff;
+            border-right:1px solid #9fcdff;
+        }
+        #toppic{
+            width:90%;
+            height:150px;
+            position:relative;
+            top:0;
+            margin:auto;
+        }
+        #toppic>p{
+            float:left;
+            clear:both;
+            width:120px;
+            height:134px;
+            overflow:hidden;
+        }
+        #toppic>.word{
+            position:absolute;
+            top:69px;
+            left:111px;
+            font-size:36px;
+        }
+        #MainContent{
+            position:relative;
+            top:0;
+            background-image: url("https://github.com/voyager911/o/raw/master/comb1/person/banner11.jpg");
+            width:90%;
+            height:990px;
+            background-attachment:flex;
+            background-size:cover;
+            margin:auto;
+        }
+        .header{
+            display:table-row-group;
+            vertical-align:middle;
+            border:thin;
+            border-color: #cccccc;
+            position:absolute;
+            top:9%;
+            left:12%;
+            width:78%;
+            height:25%;
+            padding:0;
+        }
+        .right{
+            float:right;
+        }
+        td{
+            float:none;
+            padding:0 2px;
+            width:60px;
+            height:28px;
+            font-size: 16px;
+            background-color: transparent;
+            text-align: left;
+        }
+        .Content{
+            position:relative;
+            width:90%;
+            height:890px;
+            top:0;
+            left:0;
+            right:0;
+            bottom:0;
+            margin:auto;
+            border:2px solid black;
+        }
+        .Content .left{
+            width:70%;
+            height:430px;
+            border:1px solid sandybrown;
+            font-size:large ;
+        }
+        .Content .left table{
+            float:left;
+            position: absolute;
+            top:2%;
+            left:1%;
+            line-height: normal;
+        }
+        .Content .left table tr{
+            display:block;
+        }
+        .Content .left table tr td{
+            float: none;
+            padding:5px 5px;
+            width:120px;
+            height:20px;
+            text-align:left;
+        }
+        .Content .left .a{
+            width:160px;
+            height:60px;
+        }
+        .Content .left .b{
+            width:200px;
+        }
+        .Content .left .c{
+            width:390px;
+        }
+        .Content .right {
+            position: absolute;
+            right: 0;
+            top: 0;
+            border: 1px solid black;
+            width:30%;
+            height:auto;
+            float: left;
+        }
+    </style>
 </head>
+
 <body>
-	
-<table id="calculater" onClick="calculater()">
-    <tr>
-        <td id="display" colspan="5">0</td>
-    </tr>
-    <tr>
-        <td class="numberkey">1</td>
-        <td class="numberkey">2</td>
-        <td class="numberkey">3</td>
-        <td class="numberkey">+</td>
-        <td class="numberkey" id="deletesign">c</td>
-    </tr>
-    <tr>
-        <td class="numberkey">4</td>
-        <td class="numberkey">5</td>
-        <td class="numberkey">6</td>
-        <td class="numberkey">-</td>
-        <td rowspan="3" id="equality" onclick="resultscalculater()">=</td>
-    </tr>
-    <tr>
-        <td class="numberkey">7</td>
-        <td class="numberkey">8</td>
-        <td class="numberkey">9</td>
-        <td class="numberkey">*</td>
-    </tr>
-    <tr>
-        <td class="numberkey">+/-</td>
-        <td class="numberkey">0</td>
-        <td class="numberkey">.</td>
-        <td class="numberkey">/</td>
-    </tr>
-</table>
-<div class="nva" id="nva">
-    <ul class="ww">
-        <li><div class="dropdown">
-            <button class="dropbtn">店铺主页</button>
-            <div class="dropdown-content">
-                <a href="#">产品介绍</a>
-                <a href="#">产地介绍</a>
-                <a href="#">规格介绍</a>
-            </div></div></li>
-        <li><div class="dropdown">
-            <button class="dropbtn">美发电器类</button>
-            <div class="dropdown-content">
-                <a href="#">电吹风</a>
-                <a href="#">直发器</a>
-                <a href="#">夹板</a>
-            </div></div></li>
-        <li><div class="dropdown">
-            <button class="dropbtn">美发用品类</button>
-            <div class="dropdown-content">
-                <a href="#">梳子</a>
-                <a href="#">剪刀</a>
-                <a href="#">喷水壶</a>
-            </div></div></li>
-        <li><div class="dropdown">
-            <button class="dropbtn">美发周边类</button>
-            <div class="dropdown-content">
-                <a href="#">橡皮筋</a>
-                <a href="#">推子</a>
-                <a href="#">围布</a>
-            </div></div></li>
-        <li><a href="#about" id="about"><p>关于</p></li>
-    </ul>
+<div id="toppic">
+    <p><img src="https://github.com/voyager911/o/raw/master/comb1/person/logo1.png" alt="彭"></p>
+    <div class="word"><p>卫星的<b>简历</b></p></div>
 </div>
+<div id="MainContent">
+    <div class="header">
+        <table class="left" width="50%" align="left" border="0">
+            <tbody>
+            <tr>
+                <td>姓名</td>
+                <td>pwx</td>
+                <td>籍贯</td>
+                <td>湖北武汉</td>
+            </tr>
+            <tr>
+                <td>毕业学校</td>
+                <td>武汉东湖学院</td>
+                <td>年龄</td>
+                <td>25岁</td>
+            </tr>
+            <tr>
+                <td>专业</td>
+                <td>人力资源管理</td>
+            </tr>
+            <tr>
+                <td>学历</td>
+                <td><a href="http://www.chsi.com.cn/xlcx/index.jsp" target="_blank" style="text-decoration: none">全日制本科<sub>点击学信网</sub></a></td>
+            </tr>
+            <tr>
+                <td>证书编号</td>
+                <td><ins>117981201605346806</ins></td>
+            </tr>
 
-<div class="maincontenet">
-    <div class="mcheader">
-        <h2></h2>
-        <div class="mc1">
-            <div class="img" id="img1">
-                <a target="_blank" href="#">
-                    <img src="https://github.com/voyager911/hello-world/raw/master/comb/pic3.jpg" alt="图片文本描述" width="300" height="200">
-                </a>
-                <div class="desc">图片描述5</div>
-            </div>
-        </div>
-        <div class="mc1">
-            <div class="img" id="img2">
-                <a target="_blank" href="#">
-                    <img src="https://github.com/voyager911/o/raw/master/comb1/pic6.jpg" alt="图片文本描述" width="300" height="200">
-                </a>
-                <div class="desc">图片描述6</div>
-            </div>
-        </div>
-        <div class="mc1">
-            <div class="img" id="img3">
-                <a target="_blank" href="#">
-                    <img src="https://github.com/voyager911/hello-world/raw/master/comb/pic5.jpg" alt="图片文本描述" width="300" height="200">
-                </a>
-                <div class="desc">图片描述7</div>
-            </div>
-        </div>
-        <div class="mc1">
-            <div class="img" id="img4">
-                <a target="_blank" href="#">
-                    <img src="https://github.com/voyager911/hello-world/raw/master/comb.md/pic8.jpg" alt="图片文本描述" width="300" height="200">
-                </a>
-                <div class="desc">图片描述8</div>
-            </div>
+            </tbody>
+        </table>
+        <div class="right" width="100%" align="center" border="0">
+            <p>应聘岗位:前端工程师,及其他<br />Web相关岗位</p>
         </div>
     </div>
 </div>
+<div class="Content" id="Content">
+    <div class="left">
+        <table border="1">
+            <caption style="font-size:45px; ">工作经验</caption>
+            <tr>
+                <td class="a">时间</td>
+                <td class="b">工作经历</td>
+                <td class="c">工作内容与收获</td>
+            </tr>
+            <tr>
+                <td class="a">2016年6月至2017年3月</td>
+                <td class="b">广州三元里美博城</td>
+                <td class="c">face&nbspto&nbspface和外国友人交易，其中口语与听力得到很大的提高,与人良好的沟通是良好的开始，哪怕发音不正确，也能从神情语气中推断出别人的想法，学习不是一蹴而就，需要长长久久的努力。</td>
+            </tr>
+            <tr>
+                <td class="a">2017年4月至2018年4月</td>
+                <td class="b">广州海诗生物科技有限公司</td>
+                <td class="c">广州海诗生物科技有限公司是做一家化妆品公司，在外贸圈里做了一年，见过不少外国客户，同时在工作中也学到不少知识，比如在一个完整的交易过程中，必然需要多方面的合作，你的厂家需要为你准备产品，包装，运输方式，你也需要跟客户谈好交易细节，交付方式，产品内容，然而这些需要大家的协作来完成任务，所以在未来的大环境工作和学习，我要精通一项工作或者技术，然后和大家共同完成工作。促成社会整个效率的提升。犹记得公司口号：<q>会猎五洲，遨游四海</q>。</td>
+            </tr>
 
-    <div class="contentLog">
-        <ul>
-            <div id="btnb1"><img src="images/picleft1">有害信息举报</div>
-            <div id="btnb1"><img src="images/picleft2">添加二维码</div>
-            <div id="btnb1"><img src="images/picleft3">收藏本站</div>
-            <div id="btnb1"><img src="images/picleft4">搜索</div>
-            <div id="btnb1"><img src="images/picleft5">用户反馈</div>
-        </ul>
+        </table>
+    </div>
+    <div class="right">
+        <table>
+            <tb><img src="https://github.com/voyager911/o/raw/master/comb1/person/u.jpg" width="100%" ></tb>
+            <tb><img src="https://github.com/voyager911/o/raw/master/comb1/person/i.jpg" width="100%"></tb>
+        </table>
+
     </div>
 </div>
-	<script>
-    var results="";
-    var results2="";
-    var calresults="";
-    var lastkey="";
-    var flg=1;
-    var re1=/^[\*|\/].+/;
-    var re2=/.+[\*|\/]$/;
-    var re3=/(\+|-|\*|\/)/;
-    var re4=/.+[\+|-|\*|\/]{1,99}.+/
-    var re5=/\d.+/;
-    function calculater () {
-        if (event.srcElement.innerText=="=") {
-            return;
-        }
-        if (event.srcElement.innerText=="c") {
-            results="";
-            display.innerText="0";
-            return;
-        }
-        if (event.srcElement.id=="display") {
-            return;
-        }
-
-        if (results.match(re1)) {
-            display.innerText="输入错误";
-            results="";
-            return;
-        }
-        if(lastkey.match(re3)&&event.srcElement.innerText.match(re3)){
-            return;
-        }
-        if(lastkey=="="&&event.srcElement.innerText.match(re3)){
-            results=calresults;
-        }
-
-        if (event.srcElement.innerText=="+/-"&&results!="") {
-            if (flg==-1) {
-                results=String(results2);
-                display.innerText=results;
-                flg=-flg;
-                return;
-            }
-            results2=results;
-            results = "-"+"("+results+")";
-            flg=-flg;
-            display.innerText=results;
-            return;
-        }
-
-        results+=event.srcElement.innerText;
-        lastkey=event.srcElement.innerText;
-        display.innerText=results;
-    }
-        function resultscalculater(){
-            if (results.match(re1)||results.match(re2)) {
-                display.innerText="输入错误";
-                results="";
-                return;
-            }
-
-            calresults=eval(results);
-            display.innerText=calresults;
-            lastkey="=";
-            results="";
-        }
-</script>
 </body>
 </html>
