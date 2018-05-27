@@ -11,13 +11,13 @@
             margin:0;
             padding:0;
             font-family:sans-serif;
-            background-image: url("https://github.com/voyager911/o/raw/master/comb1/person/cover.png");
+            background-image: url("cover.jpg");
             background-repeat: repeat;
             border-left:1px solid #9fcdff;
             border-right:1px solid #9fcdff;
         }
         #toppic{
-            width:90%;
+            width:80%;
             height:150px;
             position:relative;
             top:0;
@@ -39,8 +39,8 @@
         #MainContent{
             position:relative;
             top:0;
-            background-image: url("https://github.com/voyager911/o/raw/master/comb1/person/banner11.jpg");
-            width:90%;
+            background-image: url("banner11.jpg");
+            width:80%;
             height:990px;
             background-attachment:flex;
             background-size:cover;
@@ -72,20 +72,20 @@
         }
         .Content{
             position:relative;
-            width:90%;
-            height:890px;
+            width:80%;
+            height:auto;
             top:0;
             left:0;
             right:0;
             bottom:0;
             margin:auto;
-            border:2px solid black;
+            border:1px solid skyblue;
         }
         .Content .left{
-            width:70%;
-            height:430px;
-            border:1px solid sandybrown;
-            font-size:large ;
+            width:100%;
+            height:770px;
+            font-size:20px ;
+            padding:20px 0;
         }
         .Content .left table{
             float:left;
@@ -105,30 +105,63 @@
             text-align:left;
         }
         .Content .left .a{
-            width:160px;
-            height:60px;
+            width: 140px;
+            height:50px;
         }
         .Content .left .b{
-            width:200px;
+            width:180px;
         }
         .Content .left .c{
-            width:390px;
+            width:420px;
+        }
+        .Content .left .d{
+            width: 330px;
         }
         .Content .right {
             position: absolute;
-            right: 0;
-            top: 0;
             border: 1px solid black;
-            width:30%;
-            height:auto;
-            float: left;
+            width:100%;
+            float: right;
+            clear:both;
+        }
+        .contentLog>ul{
+            position:fixed;
+            top:13%;
+            right:3%;
+            list-style-type: none;//消除了表格的前缀
+            display:block;
+            padding:20px;
+            margin:2px;
+        }
+        #btnb1{
+            border:1px solid #000000;
+            width:45px;
+            margin:6px 5px;
+            padding:15px 5px;
+            color:white;
+            background-color:#4CAF50;
+            text-align: center; /*设置文本水平居中*/
+            overflow: hidden;
+            height:40px;
+        }
+        #btnb1>img:hover{
+            transform-origin:100% 0%;
+            transform:rotate(-90deg);
+            -webkit-transition:all 1.2s linear;
+            -moz-transition:all 1.2s linear;
+            -o-transition:all 1.2s linear;//图片90度切换
+        }
+        .contentLog>ul>img{
+            position:absolute;
+            right:-65px;
+            top:0;
         }
     </style>
 </head>
 
 <body>
 <div id="toppic">
-    <p><img src="https://github.com/voyager911/o/raw/master/comb1/person/logo1.png" alt="彭"></p>
+    <p><img src="logo1.png" alt="彭"></p>
     <div class="word"><p>卫星的<b>简历</b></p></div>
 </div>
 <div id="MainContent">
@@ -170,31 +203,57 @@
 <div class="Content" id="Content">
     <div class="left">
         <table border="1">
-            <caption style="font-size:45px; ">工作经验</caption>
+            <caption style="font-size:45px; ">工作历程</caption>
             <tr>
                 <td class="a">时间</td>
                 <td class="b">工作经历</td>
-                <td class="c">工作内容与收获</td>
+                <td class="c">工作内容</td>
+                <td class="d">工作感悟</td>
             </tr>
             <tr>
                 <td class="a">2016年6月至2017年3月</td>
                 <td class="b">广州三元里美博城</td>
-                <td class="c">face&nbspto&nbspface和外国友人交易，其中口语与听力得到很大的提高,与人良好的沟通是良好的开始，哪怕发音不正确，也能从神情语气中推断出别人的想法，学习不是一蹴而就，需要长长久久的努力。</td>
+                <td class="c">
+                    在该贸易公司作为销售经理的主要工作内容有：<br />
+                    1.做好公司日常型清理工作。<br />
+                    2.根据客户需求调整经营方式。<br />
+                    3.在阿里巴巴和公司官网上查看客户询盘，并作出回应。<br />
+                    4.调整公司官网页面主图和产品详情。<br />
+                    5.获取订单，并接待客户。<br />
+                    6.做好归纳与总结，并计划第二天事宜。</td>
+                <td class="d">face&nbspto&nbspface和外国友人交易，其中口语与听力得到很大的提高,与人良好的沟通是良好的开始，哪怕发音不正确，也能从神情语气中推断出别人的想法，学习不是一蹴而就，需要长长久久的努力。</td>
             </tr>
             <tr>
                 <td class="a">2017年4月至2018年4月</td>
                 <td class="b">广州海诗生物科技有限公司</td>
-                <td class="c">广州海诗生物科技有限公司是做一家化妆品公司，在外贸圈里做了一年，见过不少外国客户，同时在工作中也学到不少知识，比如在一个完整的交易过程中，必然需要多方面的合作，你的厂家需要为你准备产品，包装，运输方式，你也需要跟客户谈好交易细节，交付方式，产品内容，然而这些需要大家的协作来完成任务，所以在未来的大环境工作和学习，我要精通一项工作或者技术，然后和大家共同完成工作。促成社会整个效率的提升。犹记得公司口号：<q>会猎五洲，遨游四海</q>。</td>
+                <td class="c">在海诗生物科技有限公司作为外贸业务员的主要工作内容:<br />
+                    1.在阿里巴巴国际站上传产品，并发邮件获取询盘；<br />
+                    2.得到询盘，用邮件或者What'sup联系客户，了解客户的需求；<br />
+                    3.明白客户想要的产品，返回工厂与工厂生产工程师协商产品生产细节，和出厂日期。<br />
+                    4.从工厂获得反馈，与客户循环沟通，进一步获取产品有关包装细节，产品成分，产品的出厂日期，还有运输方式，并且确定交易价格与金额。<br />
+                    5.货物出厂前，做好质量检测，并抽样质检获得质检证书，然后安排货车运输至港口，进行出关手续工作。<br />
+                    6.和客户进行沟通货物运输事宜，并且支付剩余款项。
+                </td>
+                <td class="d">广州海诗生物科技有限公司是做一家化妆品公司，在外贸圈里做了一年，见过不少外国客户，同时在工作中也学到不少知识，比如在一个完整的交易过程中，必然需要多方面的合作，你的厂家需要为你准备产品，包装，运输方式，你也需要跟客户谈好交易细节，交付方式，产品内容，然而这些需要大家的协作来完成任务，所以在未来的大环境工作和学习，我要精通一项工作或者技术，然后和大家共同完成工作。促成社会整个效率的提升。犹记得公司口号：<q>会猎五洲，遨游四海</q>。</td>
             </tr>
 
         </table>
     </div>
-    <div class="right">
+    <!--<div class="right">
         <table>
-            <tb><img src="https://github.com/voyager911/o/raw/master/comb1/person/u.jpg" width="100%" ></tb>
-            <tb><img src="https://github.com/voyager911/o/raw/master/comb1/person/i.jpg" width="100%"></tb>
+            <tb><img src="u.jpg" width="50%" height="300" ></tb>
+            <tb><img src="i.jpg" width="50%" height="300"></tb>
         </table>
-
+    </div> -->
+</div>
+<div class="btn">
+    <div class="contentLog">
+        <ul>
+            <div id="btnb1"><img src="images/f2.jpg">添加二维码</div>
+            <div id="btnb1"><img src="images/f3.jpg">收藏本站</div>
+            <div id="btnb1"><img src="images/f4.jpg">搜索</div>
+            <div id="btnb1"><img src="images/f1.jpg">用户反馈</div>
+        </ul>
     </div>
 </div>
 </body>
