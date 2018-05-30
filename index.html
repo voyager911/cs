@@ -156,6 +156,40 @@
             right:-65px;
             top:0;
         }
+         .wrap{
+      height:170px;
+      width:490px;
+      overflow: hidden;
+      position: relative;
+      margin:100px auto;
+  }
+  .wrap ul{position:absolute;}
+  .wrap ul li{height:170px;}
+  .wrap ol{
+      position:absolute;
+      right:5px;
+      bottom:10px;
+  }
+  .wrap ol li{
+      height:20px; width: 20px;
+      background:#ccc;
+      border:solid 2px #666;
+      margin-left:5px;
+      color:#000;
+      float:left;
+      line-height:24px;
+      text-align:center;
+      cursor:pointer;
+      
+  }
+  .wrap ol .on{
+      background:#E97235;
+      color:#fff000;
+        }
+  #wrap #pic img{
+      width:800px;
+      height:430px;
+        }
     </style>
 </head>
 
@@ -236,15 +270,25 @@
                 </td>
                 <td class="d">广州海诗生物科技有限公司是做一家化妆品公司，在外贸圈里做了一年，见过不少外国客户，同时在工作中也学到不少知识，比如在一个完整的交易过程中，必然需要多方面的合作，你的厂家需要为你准备产品，包装，运输方式，你也需要跟客户谈好交易细节，交付方式，产品内容，然而这些需要大家的协作来完成任务，所以在未来的大环境工作和学习，我要精通一项工作或者技术，然后和大家共同完成工作。促成社会整个效率的提升。犹记得公司口号：<q>会猎五洲，遨游四海</q>。</td>
             </tr>
-
         </table>
     </div>
-    <!--<div class="right">
-        <table>
-            <tb><img src="https://github.com/voyager911/o/raw/master/comb1/person/u.jpg" width="50%" height="300" ></tb>
-            <tb><img src="https://github.com/voyager911/o/raw/master/comb1/person/i.jpg" width="50%" height="300"></tb>
-        </table>
-    </div> -->
+
+ <div class="wrap" id='wrap'>
+        <ul id="pic">
+            <li><img src="https://github.com/voyager911/o/raw/master/comb1/dc/w1.jpg" alt=""></li>
+            <li><img src="https://github.com/voyager911/o/raw/master/comb1/dc/w2.jpg" alt="">/li>
+            <li><img src="https://github.com/voyager911/o/raw/master/comb1/dc/w3.jpg" alt=""></li>
+            <li><img src="https://github.com/voyager911/o/raw/master/comb1/dc/w4.jpg" alt=""></li>
+            <li><img src="https://github.com/voyager911/o/raw/master/comb1/dc/w5.jpg" alt=""></li>
+        </ul>
+        <ol id="list">
+            <li class="on">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ol>
+    </div>
 </div>
 <div class="btn">
     <div class="contentLog">
@@ -256,5 +300,52 @@
         </ul>
     </div>
 </div>
+    <script type="text/javascript">
+  window.onload=function(){
+      var wrap=document.getElementById('wrap'),
+          pic=document.getElementById('pic'),
+          list=document.getElementById('list').getElementsByTagName('li'),
+          index=0,
+          timer=null;
+
+      // 定义并调用自动播放函数
+      function auto(){
+          timer=setInterval(function(){
+              index++;
+              if(index>=list.length){
+                  index=0;
+              }
+              change(index);
+          },1000);
+      }
+      auto();
+      // 定义图片切换函数
+      function change(curIndex){
+          pic.style.marginTop=-170*curIndex+"px";
+          for(var j=0;j<list.length;j++){
+              list[j].className="";
+          }
+          list[curIndex].className="on";
+          index=curIndex;
+      }
+
+      // 鼠标划过整个容器时停止自动播放
+      wrap.onmouseover=function(){
+          clearInterval(timer);
+      };
+
+      // 鼠标离开整个容器时继续播放至下一张
+      wrap.onmouseout=auto;
+
+      // 遍历所有数字导航实现划过切换至对应的图片
+      for(var i=0;i<list.length;i++){
+          list[i].id=i;
+          list[i].onmouseover=function(){
+              change(this.id);
+          }
+      }
+  }
+
+  </script>
 </body>
 </html>
