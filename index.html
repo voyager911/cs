@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=310 height=86 src="//music.163.com/outchain/player?type=2&id=36103669&auto=0&height=66"></iframe>
+    <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=37304598f7cc232cd84aabee0a77850b"></script>
     <title>个人简历</title>
     
     <style>
@@ -270,6 +271,7 @@
             </tr>
         </table>
     </div>
+    <div id="container" style="width:500px; height:300px"></div>
 
  <div class="wrap" id='wrap'>
         <ul id="pic">
@@ -343,7 +345,10 @@
           }
       }
   }
-
+var map = new AMap.Map('container',{
+    zoom: 10,
+    center: [116.39,39.9]
+});
   </script>
 </body>
 </html>
