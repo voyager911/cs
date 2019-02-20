@@ -2,9 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=310 height=86 src="//music.163.com/outchain/player?type=2&id=36103669&auto=0&height=66"></iframe>
-    <script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.10&key=caae8e0482dfdb23e20afafb5b253404"></script> 
-    <title>个人简历</title>
+    <title class='z'>个人简历</title>
     
     <style>
         *{margin:0;padding:0;}
@@ -186,12 +184,26 @@
       background:#E97235;
       color:#fff000;
         }
-
+  .z:after {
+    background: none repeat scroll 0 0 transparent;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: yellow;
+    transition: width .3s ease 0s, left .3s ease 0s;
+    width: 0
+}
+.z:hover:after {
+    width: 100%;
+    left: 0
+}
     </style>
 </head>
 
 <body>
-<div id="toppic">
+<div id="toppic z">
     <p><img src="https://github.com/voyager911/o/raw/master/comb1/person/logo1.png" alt="彭"></p>
     <div class="word"><p>卫星的<b>简历</b></p></div>
 </div>
