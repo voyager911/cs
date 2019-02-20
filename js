@@ -1,4 +1,4 @@
-window.onload = function(){
+/*window.onload = function(){
     var list = document.getElementById("list");
     var pre = document.getElementById("pre");
     var next = document.getElementById("next");
@@ -37,3 +37,52 @@ window.onload = function(){
     container.onmouseout=play;
 
 }
+*/
+window.onload=function(){
+        var wrap=document.getElementById('wrap'),
+            pic=document.getElementById('pic'),
+            list=document.getElementById('list').getElementsByTagName('li'),
+            index=0,
+            timer=null;
+
+        // 定义并调用自动播放函数
+        function auto(){
+            timer=setInterval(function(){
+                index++;
+                if(index>=list.length){
+                    index=0;
+                }
+                change(index);
+            },1000);
+        }
+        auto();
+        // 定义图片切换函数
+        function change(curIndex){
+            pic.style.marginTop=-170*curIndex+"px";
+            for(var j=0;j<list.length;j++){
+                list[j].className="";
+            }
+            list[curIndex].className="on";
+            index=curIndex;
+        }
+
+        // 鼠标划过整个容器时停止自动播放
+        wrap.onmouseover=function(){
+            clearInterval(timer);
+        };
+
+        // 鼠标离开整个容器时继续播放至下一张
+        wrap.onmouseout=auto;
+
+        // 遍历所有数字导航实现划过切换至对应的图片
+        for(var i=0;i<list.length;i++){
+            list[i].id=i;
+            list[i].onmouseover=function(){
+                change(this.id);
+            }
+        }
+    }
+    var map = new AMap.Map('container',{
+        zoom: 10,
+        center: [116.39,39.9]
+    });
