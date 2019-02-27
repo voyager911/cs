@@ -6,6 +6,24 @@ const numWhiteKeys = 20;
 var intervals = [];
 var running = true;
 var isKeyframesSupported;
+var w = document.getElementById('w');
+var x1 = parseFloat(getComputedStyle(w).getPropertyValue('--zipper-x'));
+var toTheRight = true;
+
+function moveZipper() {
+  x1 = x1 + (toTheRight ? .5 : -.5);
+  w.style.setProperty('--zipper-x', x);
+  if (x1 >= 110 || x1 <= 10) {
+    toTheRight = !toTheRight; //change direction
+    setTimeout(function() {
+      requestAnimationFrame(moveZipper);
+    }, 3000);
+  } else {
+    requestAnimationFrame(moveZipper);
+  }
+}
+moveZipper();
+
 //
 
 //check for support of variables in keyframes
