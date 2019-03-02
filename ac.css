@@ -24,4 +24,185 @@
     transition: width .3s ease 0s, left .3s ease 0s;
     width: 0
 }
+    
+svg {
+    width: 100%;
+}
+.str2 {
+    stroke: #A2B4A7;
+    stroke-width: 1.99968
+}
+.str4 {
+    stroke: #B0CB1F;
+    stroke-width: 4.99979;
+    stroke-linecap: round;
+    stroke-linejoin: round
+}
+.str14 {
+    stroke: #B0CB1F;
+    stroke-width: 3.63084
+}
+.str24 {
+    stroke: #B0CB1F;
+    stroke-width: 5.48051
+}
+.str18 {
+    stroke: #B0CB1F;
+    stroke-width: 3.10051
+}
+.str13 {
+    stroke: #B0CB1F;
+    stroke-width: 3.80447
+}
+.str12 {
+    stroke: #B0CB1F;
+    stroke-width: 5.2372;
+    stroke-linecap: round;
+    stroke-linejoin: round
+}
+.str20 {
+    stroke: #B0CB1F;
+    stroke-width: 6.15258;
+    stroke-linecap: round;
+    stroke-linejoin: round
+}
+.str17 {
+    stroke: #B0CB1F;
+    stroke-width: 4.65844;
+    stroke-linecap: round;
+    stroke-linejoin: round
+}
+.str9 {
+    stroke: #B0CB1F;
+    stroke-width: 2.87254;
+    stroke-linecap: round;
+    stroke-linejoin: round
+}
+.str8 {
+    stroke: #B0CB1F;
+    stroke-width: 4.99979;
+    stroke-linecap: round;
+    stroke-linejoin: round
+}
+.str6 {
+    stroke: #B0CB1F;
+    stroke-width: 4.99979;
+    stroke-linecap: round;
+    stroke-linejoin: round
+}
+.str22 {
+    stroke: #B0CB1F;
+    stroke-width: 1.97842;
+    stroke-linecap: round;
+    stroke-linejoin: round
+}
+.str21 {
+    stroke: #B0CB1F;
+    stroke-width: 1.97842;
+    stroke-linecap: round;
+    stroke-linejoin: round
+}
+.str23 {
+    stroke: #B0CB1F;
+    stroke-width: 4.40685;
+    stroke-linecap: round;
+    stroke-linejoin: round
+}
+.str3 {
+    stroke: #B0CB1F;
+    stroke-width: 5.01396;
+    stroke-linecap: round;
+    stroke-linejoin: round
+}
+.str10 {
+    stroke: #B0CB1F;
+    stroke-width: 2.89971;
+    stroke-linecap: round;
+    stroke-linejoin: round
+}
+.str11 {
+    stroke: #B0CB1F;
+    stroke-width: 2.89971;
+    stroke-linecap: round;
+    stroke-linejoin: round
+}
+.str5 {
+    stroke: #B0CB1F;
+    stroke-width: 2.92333;
+    stroke-linecap: round;
+    stroke-linejoin: round
+}
+.str7 {
+    stroke: #B0CB1F;
+    stroke-width: 2.34812;
+    stroke-linecap: round;
+    stroke-linejoin: round
+}
+.str19 {
+    stroke: #B0CB1F;
+    stroke-width: 3.25642;
+    stroke-linecap: round;
+    stroke-linejoin: round
+}
+.str0 {
+    stroke: #B0CB1F;
+    stroke-width: 13.8619;
+    stroke-linecap: round;
+    stroke-linejoin: round
+}
+.str1 {
+    stroke: #B0CB1F;
+    stroke-width: 13.8619;
+    stroke-linecap: round;
+    stroke-linejoin: round
+}
+.str15 {
+    stroke: #B0CB1F;
+    stroke-width: 3.6084;
+    stroke-linecap: round;
+    stroke-linejoin: round
+}
+.str16 {
+    stroke: #B0CB1F;
+    stroke-width: 3.6084;
+    stroke-linecap: round;
+    stroke-linejoin: round
+}
+.fil0 {
+    fill: none
+}
+.fil2 {
+    fill: #B47A4B
+}
+.fil4 {
+    fill: #9F6B41
+}
+.fil1 {
+    fill: #805C40
+}
+.fil3 {
+    fill: #75563E
+}
+.fil9 {
+    fill: #634A35
+}
+.fil10 {
+    fill: #524235
+}
+.fil6 {
+    fill: #61A375
+}
+.fil7 {
+    fill: #B0CB1F;
+    fill-rule: nonzero
+}
+.fil8 {
+    fill: url(#id1)
+}
+.fil11 {
+    fill: url(#id2)
+}
+.fil5 {
+    fill: url(#id3)
+}
 
